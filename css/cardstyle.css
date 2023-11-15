@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Borel|Rokkitt|Unbounded');
+body {
+    background: #380f2d;
+}
+.card {
+    width: 1000px;
+    height: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 1px #ffcccc;
+}
+
+.card-detail, .card-image {
+    position: relative;
+    text-align: left;
+    overflow: hidden;
+    height: 100%;
+    display: inline-block;
+}
+
+.card-detail {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
+.card-detail h1 {
+    font-family: 'Unbounded', serif;
+    font-size: 30px;
+    color: #380f2d;
+    margin: 0;
+}
+
+.card-detail p {
+    font-size: 15px;
+    font-family: 'Borel', serif;
+    text-align: left;
+    color: #380f2d;
+}
+
+.card-image {
+    float: right;
+    width: 45%;
+    transition: all 0.5s ease-out;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-info {
+    transform: translateX(-100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #1b1a1ae6;
+    width: 100%;
+    height: 100%;
+    font-family: 'Rokkitt', serif;
+    color: #ffcccc;
+    line-height: 1.8;
+    font-size: 105%;
+    transition: all 0.5s ease-out;
+}
+
+.card-info h2 { text-align: center;}
+.card-info ul li {
+    transition: 0.5s ease;
+}
+.card-info ul li:hover {
+    transform: translateX(30px) scale(1.1);
+}
+.card-image:hover .card-info {
+    transform: translateX(0);
+}
+.card-image:hover img {
+    transition: all 0.5s ease-out;
+    transform: scale(1.2, 1.2);
+}
